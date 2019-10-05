@@ -25,43 +25,12 @@ The first split (the red vertical plane) cuts the root cell (white) into two sub
 ***
 
 ## Creating a K D Tree
-For creation of a K D Tree using python:
+Creation of a K D Tree using python:
 
-    from collections import namedtuple
-    from operator import itemgetter
-    from pprint import pformat
+Source available here 
+    https://github.com/ashleshmahule/ClosestPairProblem/blob/master/creatingKDTree.py
+
     
-    class Node(namedtuple('Node', 'location left_child right_child')):
-        def __repr__(self):
-            return pformat(tuple(self))
-
-    def kdtree(point_list, depth=0):
-        if not point_list:
-            return None
-
-        k = len(point_list[0]) # assumes all points have the same dimension
-        # Select axis based on depth so that axis cycles through all valid values
-        axis = depth % k
-
-        # Sort point list by axis and choose median as pivot element
-        point_list.sort(key=itemgetter(axis))
-        median = len(point_list) // 2
-
-        # Create node and construct subtrees
-        return Node(
-            location=point_list[median],
-            left_child=kdtree(point_list[:median], depth + 1),
-            right_child=kdtree(point_list[median + 1:], depth + 1)
-        )
-
-    def main():
-        #sample points
-        point_list = [(7,2), (5,4), (9,6), (4,7), (8,1), (2,3)]
-        tree = kdtree(point_list)
-        print(tree)
-
-    if __name__ == '__main__':
-        main()
     
 ***
 
@@ -88,46 +57,7 @@ The training data
     
 ***
 
-## Solution of the closest pair problem
+### Solution 
 
-This solution uses the powerful python library known as scikit-learn.
-For more information on scikit-learn refer https://scikit-learn.org/stable/.
-
-(I have used python version 3.7)
-
-    from sklearn.neighbors import KDTree
-    import numpy as np
-
-    #Sample set of points
-    points = np.array([[2, 3], [12, 30], [40, 50], [5, 1], [12, 10], [3, 4], [1, 2], [2, 1]])
-
-    #Creating a K D Tree
-    tree = KDTree(points, leaf_size=2)
-
-    #query function for computing the distance between all the points which returns as list
-    nearest_dist, nearest_ind = tree.query(points, k=2)
-
-    i = int(0)
-
-    #Finding minimum distance and the points between the distance is minimum
-    for dist in nearest_dist[:, 1]:
-        min_dist = float(9999)
-        if dist < min_dist:
-            min_dist = dist
-            min_nodes = nearest_ind[i]
-        i += 1
-
-    print('The minimum distance is:')
-    print(min_dist)
-
-    print('Between the points', min_nodes[0], ' and ', min_nodes[1])
-
-***
-
-### Sample Output
-
-    The minimum distance is:
-    1.4142135623730951
-    Between the points 7  and  6
-
-
+Solution File Link 
+    https://github.com/ashleshmahule/ClosestPairProblem/blob/master/Assign3.py
