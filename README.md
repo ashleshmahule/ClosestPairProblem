@@ -14,7 +14,9 @@ Points to the left of this hyperplane are represented by left sub-tree of that n
 
 The hyperplane direction is chosen in the following way: every node in the tree is associated with one of the k dimensions, with the hyperplane perpendicular to that dimension's axis. So, for example, if for a particular split the "x" axis is chosen, all points in the subtree with a smaller "x" value than the node will appear in the left subtree and all points with larger "x" value will be in the right subtree. In such a case, the hyperplane would be set by the x-value of the point, and its normal would be the unit x-axis.
 
-![3D K D Tree Image]()
+Here's how a 3D K D tree looks-
+
+![](https://github.com/ashleshmahule/ClosestPairProblem/blob/master/3dtree.png)
 
 This solution uses the powerful python library known as scikit-learn.
 For more information on scikit-learn refer https://scikit-learn.org/stable/.
