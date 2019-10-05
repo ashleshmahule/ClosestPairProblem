@@ -122,6 +122,8 @@ For more information on scikit-learn refer https://scikit-learn.org/stable/.
 
     print('Between the points', min_nodes[0], ' and ', min_nodes[1])
 
+***
+
 ### Sample Output
 
     The minimum distance is:
