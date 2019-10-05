@@ -68,5 +68,8 @@ For more information refer https://scikit-learn.org/stable/modules/generated/skl
 
 ### Solution 
 
+Complexity for creating a K D Tree is O(n (logn)^2).
+But for finding the closest pair point is O(logn).
+
 Solution File Link 
     https://github.com/ashleshmahule/ClosestPairProblem/blob/master/Assign3.py
