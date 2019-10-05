@@ -42,19 +42,28 @@ The function for creating a K D Tree is-
 
     Parameters:	
     X : array-like, shape = [n_samples, n_features]
-           n_samples is the number of points in the data set, and n_features is the dimension of the parameter space. Note: if X is a C-contiguous array of doubles then data will not be copied. Otherwise, an internal copy will be made.
+           n_samples is the number of points in the data set, and n_features is the dimension of the parameter space.
+           Note: if X is a C-contiguous array of doubles then data will not be copied.
+           Otherwise, an internal copy will be made.
 
     leaf_size : positive integer (default = 40)
-                   Number of points at which to switch to brute-force. Changing leaf_size will not affect the results of a query, but can significantly impact the speed of a query and the memory required to store the constructed tree. The amount of memory needed to store the tree scales as approximately n_samples / leaf_size. For a specified leaf_size, a leaf node is guaranteed to satisfy leaf_size <= n_points <= 2 * leaf_size, except in the case that n_samples < leaf_size.
+                   Number of points at which to switch to brute-force.
+                   Changing leaf_size will not affect the results of a query, but can significantly impact the speed of a
+                   query and the memory required to store the constructed tree. The amount of memory needed to store the
+                   tree scales as approximately n_samples / leaf_size.
+                   For a specified leaf_size, a leaf node is guaranteed to satisfy leaf_size <= n_points <= 2 * leaf_size, except in the case that n_samples < leaf_size.
 
     metric : string or DistanceMetric object
-                The distance metric to use for the tree. Default=’minkowski’ with p=2 (that is, a euclidean metric). See the documentation of the DistanceMetric class for a list of available metrics. kd_tree.valid_metrics gives a list of the metrics which are valid for KDTree.
+                The distance metric to use for the tree. Default=’minkowski’ with p=2 (that is, a euclidean metric).
+                See the documentation of the DistanceMetric class for a list of available metrics.
+                kd_tree.valid_metrics gives a list of the metrics which are valid for KDTree.
 
     Additional keywords are passed to the distance metric class.
     Attributes:	
     data : memory view
             The training data
     
+For more information refer https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html    
 ***
 
 ### Solution 
