@@ -18,8 +18,9 @@ Here's how a 3D K D tree looks-
 
 ![3D K D Tree](https://github.com/ashleshmahule/ClosestPairProblem/blob/master/3dtree.png)
 
-This solution uses the powerful python library known as scikit-learn.
-For more information on scikit-learn refer https://scikit-learn.org/stable/.
+The first split (the red vertical plane) cuts the root cell (white) into two subcells, each of which is then split (by the green horizontal planes) into two subcells. Finally, four cells are split (by the four blue vertical planes) into two subcells. Since there is no more splitting, the final eight are called leaf cells.
+
+
 
 ***
 
@@ -88,6 +89,9 @@ The training data
 ***
 
 ## Solution of the closest pair problem
+
+This solution uses the powerful python library known as scikit-learn.
+For more information on scikit-learn refer https://scikit-learn.org/stable/.
 
 (I have used python version 3.7)
 
