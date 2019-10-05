@@ -89,6 +89,8 @@ The training data
 
 ## Solution of the closest pair problem
 
+(I have used python version 3.7)
+
     from sklearn.neighbors import KDTree
     import numpy as np
 
