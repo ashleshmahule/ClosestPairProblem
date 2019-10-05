@@ -16,7 +16,7 @@ The hyperplane direction is chosen in the following way: every node in the tree 
 
 Here's how a 3D K D tree looks-
 
-![](https://github.com/ashleshmahule/ClosestPairProblem/blob/master/3dtree.png)
+![3D K D Tree](https://github.com/ashleshmahule/ClosestPairProblem/blob/master/3dtree.png)
 
 This solution uses the powerful python library known as scikit-learn.
 For more information on scikit-learn refer https://scikit-learn.org/stable/.
